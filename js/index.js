@@ -3,14 +3,11 @@
 
 
 /* 
- keydown 
  wheel 
  drag / drop
- load
  focus
  resize
- scroll
- select
+
  
  */
 
@@ -45,19 +42,33 @@ window.addEventListener('keydown', (event) => {
     console.log('some one pressed a key!');
 });
 
-// 6. need to add better code here for 3
-//select 
-window.addEventListener('select', (event) => {
-    console.log('some one pressed a key!');
+// 6. need to add better code here for
+window.addEventListener('keyup', (event) => {
+    console.log('some one let go of a key!');
 });
 
-//7.
+
+//7. adding events to the intro
+const intro=querySelector(".intro");
+intro.addEventListener('select', (event) => {
+    intro.style.color='purple';
+});
 
 //8.
 
+intro.addEventListener('scroll', (event) => {
+    intro.style.color='blue';
+});
+
 //9.
+intro.addEventListener('scroll', (event) => {
+    intro.style.color='blue';
+});
 
 //10.
+intro.addEventListener('focus', (event) => {
+    event.target.style.background = 'pink';    
+  });
 
 
 // stopping an event from propogating:
